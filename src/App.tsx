@@ -1,9 +1,14 @@
 import { useState } from "react";
 import "./App.css";
+import DeleteButton from "./components/DeleteButton";
 import TodoForm from "./components/TodoForm";
 
 function App() {
 	const [todos, setTodos] = useState<string[]>([]);
+
+	const removeTodo = (todoToRemove: string) => {
+		setTodos(todos.filter((todo) => todo !== todoToRemove));
+	};
 
 	return (
 		<>
@@ -13,7 +18,10 @@ function App() {
 
 			<ul>
 				{todos.map((todo) => (
-					<li key={todo}>{todo}</li>
+					<li key={todo}>
+						{todo}
+						<DeleteButton onClick={() => removeTodo(todo)} />
+					</li>
 				))}
 			</ul>
 		</>
