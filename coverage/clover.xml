@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1723551670834" clover="3.2.0">
-  <project timestamp="1723551670834" name="All files">
-    <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9" elements="20" coveredelements="20" complexity="0" loc="11" ncloc="11" packages="2" files="3" classes="3"/>
+<coverage generated="1723551794991" clover="3.2.0">
+  <project timestamp="1723551794992" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10" elements="22" coveredelements="22" complexity="0" loc="12" ncloc="12" packages="2" files="4" classes="4"/>
     <package name="src">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
       <file name="App.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/App.tsx">
@@ -14,8 +14,12 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
       <file name="DeleteButton.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/components/DeleteButton.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+      <file name="EditButton.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/components/EditButton.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="7" count="1" type="stmt"/>
       </file>
