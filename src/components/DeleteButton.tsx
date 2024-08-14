@@ -6,7 +6,7 @@ interface DeleteButtonProps {
 
 const DeleteButton: FC<DeleteButtonProps> = ({ onClick }) => {
 	return (
-		<button onClick={onClick} aria-label="Delete">
+		<button onClick={onClick} className="delete-button" aria-label="Delete">
 			Delete
 		</button>
 	);

@@ -34,7 +34,7 @@ function App() {
 
 	return (
 		<>
-			<h1>Min TodoApp</h1>
+			<h1>My TodoApp</h1>
 
 			<TodoForm onSubmit={addTodo} />
 
