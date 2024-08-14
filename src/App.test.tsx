@@ -154,4 +154,20 @@ describe("App", () => {
 		// Bekräfta att editIndex är null efter spara
 		expect(screen.queryByLabelText("edit-todo-input")).toBeNull();
 	});
+	it("should have a red delete button", () => {
+		render(<App />);
+
+		// Lägg till ett todo
+		fireEvent.input(screen.getByPlaceholderText("Write a todo"), {
+			target: { value: "Sleep" },
+		});
+		fireEvent.click(screen.getByText("Save"));
+
+		// Kontrollera att det finns en delete-knapp
+		const deleteButton = screen.getAllByRole("button", { name: /delete/i })[0];
+
+		// Kontrollera bakgrundsfärgen
+		const styles = getComputedStyle(deleteButton);
+		expect(styles.backgroundColor).toBe("rgb(255, 76, 76)"); // motsvarar #ff4c4c
+	});
 });

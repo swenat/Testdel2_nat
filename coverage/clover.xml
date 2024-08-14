@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1723635377956" clover="3.2.0">
-  <project timestamp="1723635377957" name="All files">
+<coverage generated="1723635799451" clover="3.2.0">
+  <project timestamp="1723635799451" name="All files">
     <metrics statements="27" coveredstatements="27" conditionals="5" coveredconditionals="5" methods="14" coveredmethods="14" elements="46" coveredelements="46" complexity="0" loc="27" ncloc="27" packages="2" files="4" classes="4"/>
     <package name="src">
       <metrics statements="20" coveredstatements="20" conditionals="5" coveredconditionals="5" methods="9" coveredmethods="9"/>
       <file name="App.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/App.tsx">
         <metrics statements="20" coveredstatements="20" conditionals="5" coveredconditionals="5" methods="9" coveredmethods="9"/>
-        <line num="8" count="28" type="stmt"/>
-        <line num="9" count="28" type="stmt"/>
-        <line num="10" count="28" type="stmt"/>
-        <line num="12" count="28" type="stmt"/>
-        <line num="13" count="10" type="stmt"/>
-        <line num="16" count="28" type="stmt"/>
+        <line num="8" count="30" type="stmt"/>
+        <line num="9" count="30" type="stmt"/>
+        <line num="10" count="30" type="stmt"/>
+        <line num="12" count="30" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="16" count="30" type="stmt"/>
         <line num="17" count="2" type="stmt"/>
-        <line num="20" count="28" type="stmt"/>
+        <line num="20" count="30" type="stmt"/>
         <line num="21" count="4" type="stmt"/>
         <line num="22" count="4" type="stmt"/>
-        <line num="25" count="28" type="stmt"/>
+        <line num="25" count="30" type="stmt"/>
         <line num="26" count="3" type="cond" truecount="4" falsecount="0"/>
         <line num="27" count="2" type="stmt"/>
         <line num="28" count="2" type="stmt"/>
@@ -40,11 +40,11 @@
       </file>
       <file name="TodoForm.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/components/TodoForm.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="9" count="41" type="stmt"/>
-        <line num="11" count="41" type="stmt"/>
-        <line num="12" count="11" type="stmt"/>
-        <line num="13" count="11" type="stmt"/>
-        <line num="22" count="11" type="stmt"/>
+        <line num="9" count="44" type="stmt"/>
+        <line num="11" count="44" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="13" count="12" type="stmt"/>
+        <line num="22" count="12" type="stmt"/>
       </file>
     </package>
   </project>

@@ -17,4 +17,14 @@ describe("DeleteButton", () => {
 
 		expect(handleClick).toBeCalled();
 	});
+
+	it("should have a red background color", () => {
+		render(<DeleteButton onClick={vi.fn()} />);
+
+		const button = screen.getByRole("button");
+		const styles = getComputedStyle(button);
+
+		// Kontrollera att bakgrundsfärgen är #ff4c4c
+		expect(styles.backgroundColor).toBe("rgb(255, 76, 76)"); // motsvarar #ff4c4c
+	});
 });
