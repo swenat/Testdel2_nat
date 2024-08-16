@@ -8,10 +8,8 @@ describe("DeleteButton", () => {
 
 		const button = screen.getByRole("button");
 
-		// Kontrollera att knappen har rätt text
 		expect(button).toHaveTextContent("Delete");
 
-		// Kontrollera att bakgrundsfärgen är #ff4c4c (röd)
 		const styles = getComputedStyle(button);
 		expect(styles.backgroundColor).toBe("rgb(255, 76, 76)");
 	});
