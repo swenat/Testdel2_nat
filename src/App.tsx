@@ -7,10 +7,16 @@ import TodoForm from "./components/TodoForm";
 function App() {
 	const [todos, setTodos] = useState<string[]>([]);
 	const [editIndex, setEditIndex] = useState<number | null>(null);
-	const [editText, setEditText] = useState("");
 
-	const addTodo = (text: string) => {
-		setTodos([...todos, text]);
+	const addOrEditTodo = (text: string) => {
+		if (editIndex !== null) {
+			const updatedTodos = [...todos];
+			updatedTodos[editIndex] = text;
+			setTodos(updatedTodos);
+			setEditIndex(null);
+		} else {
+			setTodos([...todos, text]);
+		}
 	};
 
 	const removeTodo = (todoToRemove: string) => {
@@ -19,36 +25,17 @@ function App() {
 
 	const startEditing = (index: number) => {
 		setEditIndex(index);
-		setEditText(todos[index]);
-	};
-
-	const saveEdit = () => {
-		if (editIndex !== null && editText.trim() !== "") {
-			const updatedTodos = [...todos];
-			updatedTodos[editIndex] = editText;
-			setTodos(updatedTodos);
-			setEditIndex(null);
-			setEditText("");
-		}
 	};
 
 	return (
 		<>
 			<h1>My TodoApp</h1>
 
-			<TodoForm onSubmit={addTodo} />
-
-			{editIndex !== null && (
-				<div>
-					<input
-						type="text"
-						aria-label="edit-todo-input"
-						value={editText}
-						onChange={(e) => setEditText(e.target.value)}
-					/>
-					<button onClick={saveEdit}>Save Edit</button>
-				</div>
-			)}
+			<TodoForm
+				onSubmit={addOrEditTodo}
+				initialText={editIndex !== null ? todos[editIndex] : ""}
+				editMode={editIndex !== null}
+			/>
 
 			<ul>
 				{todos.map((todo, index) => (

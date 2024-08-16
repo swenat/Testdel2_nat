@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1723796258485" clover="3.2.0">
-  <project timestamp="1723796258485" name="All files">
-    <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="2" coveredelements="2" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
-    <file name="DeleteButton.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/components/DeleteButton.tsx">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="7" count="1" type="stmt"/>
-    </file>
+<coverage generated="1723802799490" clover="3.2.0">
+  <project timestamp="1723802799490" name="All files">
+    <metrics statements="26" coveredstatements="26" conditionals="10" coveredconditionals="10" methods="13" coveredmethods="13" elements="49" coveredelements="49" complexity="0" loc="26" ncloc="26" packages="2" files="4" classes="4"/>
+    <package name="src">
+      <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+      <file name="App.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/App.tsx">
+        <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+        <line num="8" count="24" type="stmt"/>
+        <line num="9" count="24" type="stmt"/>
+        <line num="11" count="24" type="stmt"/>
+        <line num="12" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="22" count="24" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="26" count="24" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="44" count="4" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+      <file name="DeleteButton.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/components/DeleteButton.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+      <file name="EditButton.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/components/EditButton.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+      <file name="TodoForm.tsx" path="C:/Users/lysef/Downloads/Testdel2_nat/src/components/TodoForm.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="11" count="60" type="stmt"/>
+        <line num="13" count="60" type="stmt"/>
+        <line num="14" count="17" type="stmt"/>
+        <line num="17" count="60" type="stmt"/>
+        <line num="18" count="16" type="stmt"/>
+        <line num="19" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="14" type="stmt"/>
+        <line num="21" count="14" type="stmt"/>
+        <line num="30" count="15" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

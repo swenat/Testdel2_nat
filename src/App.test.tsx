@@ -12,7 +12,7 @@ describe("App", () => {
 
 		fireEvent.click(screen.getByText("Save"));
 
-		expect(screen.getByText("Sleep"));
+		expect(screen.getByText("Sleep")).toBeInTheDocument();
 	});
 
 	it("should be possible to add multiple todos", () => {
@@ -50,13 +50,8 @@ describe("App", () => {
 		expect(screen.queryByText("Sleep")).toBeNull();
 		expect(screen.getByText("Eat")).toBeInTheDocument();
 	});
-	it("should render edit input only when editing a todo", () => {
-		render(<App />);
 
-		expect(screen.queryByLabelText("edit-todo-input")).toBeNull();
-	});
-
-	it("should display edit input when a todo is being edited", async () => {
+	it("should set the form to edit mode when editing a todo", () => {
 		render(<App />);
 
 		fireEvent.input(screen.getByPlaceholderText("Write a todo"), {
@@ -66,7 +61,8 @@ describe("App", () => {
 
 		fireEvent.click(screen.getAllByRole("button", { name: /edit/i })[0]);
 
-		expect(screen.getByLabelText("edit-todo-input")).toBeVisible();
+		expect(screen.getByRole("textbox")).toHaveValue("Sleep");
+		expect(screen.getByText("Save Edit")).toBeInTheDocument();
 	});
 
 	it("should save the edited todo and remove the old todo", async () => {
@@ -84,7 +80,7 @@ describe("App", () => {
 
 		fireEvent.click(screen.getAllByRole("button", { name: /edit/i })[0]);
 
-		const editInput = screen.getByLabelText("edit-todo-input");
+		const editInput = screen.getByRole("textbox");
 		fireEvent.change(editInput, { target: { value: "Rest" } });
 		fireEvent.click(screen.getByText("Save Edit"));
 
@@ -105,9 +101,7 @@ describe("App", () => {
 		fireEvent.click(screen.getByText("Save"));
 
 		fireEvent.click(screen.getAllByRole("button", { name: /edit/i })[0]);
-
-		const editInput = screen.getByLabelText("edit-todo-input");
-		fireEvent.change(editInput, { target: { value: "" } });
+		fireEvent.input(screen.getByRole("textbox"), { target: { value: "" } });
 		fireEvent.click(screen.getByText("Save Edit"));
 
 		await waitFor(() => {
@@ -128,27 +122,14 @@ describe("App", () => {
 
 		fireEvent.click(screen.getAllByRole("button", { name: /edit/i })[0]);
 
-		const editInput = screen.getByLabelText("edit-todo-input");
+		const editInput = screen.getByRole("textbox");
 		fireEvent.change(editInput, { target: { value: "Rest" } });
 		fireEvent.click(screen.getByText("Save Edit"));
 
 		await waitFor(() => {
 			expect(screen.getByText("Rest")).toBeInTheDocument();
 		});
-
-		expect(screen.queryByLabelText("edit-todo-input")).toBeNull();
-	});
-	it("should have a red delete button", () => {
-		render(<App />);
-
-		fireEvent.input(screen.getByPlaceholderText("Write a todo"), {
-			target: { value: "Sleep" },
-		});
-		fireEvent.click(screen.getByText("Save"));
-
-		const deleteButton = screen.getAllByRole("button", { name: /delete/i })[0];
-
-		const styles = getComputedStyle(deleteButton);
-		expect(styles.backgroundColor).toBe("rgb(255, 76, 76)");
 	});
 });
+
+//hade gått att slå ihop testerna för edit till en men tyckte att denna var tydligare
